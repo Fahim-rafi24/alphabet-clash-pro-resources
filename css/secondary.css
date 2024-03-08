@@ -1,0 +1,35 @@
+
+
+/* font family class */
+.poppins{
+    font-family: "Poppins", sans-serif;
+}
+.anton{
+    font-family: "Anton", sans-serif;
+}
+.inter{
+    font-family: "Inter", sans-serif;
+}
+
+.btn{
+    border: 1px solid white;
+    background:#ffffff;
+    color: #010313;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.table{
+    border: 1px solid black;
+    color: #FFFFFF;
+    background-color: #2F2941;
+    border-radius: 0px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 20vw;
+    height: 30px;
+    margin: auto;
+}
