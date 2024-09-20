@@ -1,75 +1,67 @@
-
-
-
-// start the game
-document.getElementById('start-btn').addEventListener('click' , function(){
-    // hide the 1st page
-    const homePage = document.getElementById('home-page');
-    homePage.classList.add("hidden");
-    // show game field section
-    const playGroundPage = document.getElementById('play-ground-page');
-    playGroundPage.classList.remove("hidden");
-
-
-    // check life & act according for this
-    const gameLifeIndex = document.getElementById('game-life-index');
-    // console.log(gameLifeIndex.innerText);
-    if (gameLifeIndex.innerText === '0') {
-        // hide the game page
-        const playGroundPage = document.getElementById('play-ground-page');
-        playGroundPage.classList.add("hidden");
-        // show End Page section
-        const endPage = document.getElementById('end-page');
-        endPage.classList.remove("hidden");
-    }
-
-
-
-})
-
-
-
-// keybord work function
-function checkWord(word){
-    // console.log(word);
-    const displayByShowWord = document.getElementById('display-by-show-word');
-    const displayWord = displayByShowWord.innerText;
-    // console.log(displayByShowWord.innerText);
-    if (word === displayWord) {
-        console.log('good word is correct');
-        // const gamePointIndex = document.getElementById('game-point-index');
-        // const valuePoint = parseFloat(gamePointIndex.innerText);
-        // valuePoint += 1; 
-        // console.log(valuePoint);
-        // console.log(typeof valuePoint);
-    }
-    else{
-        console.log("bad the word is worng");
-        const gameLifeIndex = document.getElementById('game-life-index');
-        const valueLife = gameLifeIndex.innerText;
-        const number = parseInt(valueLife);
-        // i = i + 1;
-        number = 1 ;
-        console.log(number);
-        console.log(typeof number);
-    }
+// first hide home area & open the game field
+function startGame(){
+// hide the home-page 
+    getHideTheElement('home-page');
+// show game section
+    getShowTheElement('play-ground-page');
+// open game
+    openGame();
 }
 
 
+// Start Play The Game
+function openGame(){
+    // genarate random word
+        genarateRandomWord();
+    
+    // make targeted key orange
+        const displayByShowWord = document.getElementById('display-by-show-word');
+        let kbdValue = displayByShowWord.innerText.toUpperCase();
+        kdbBgMakeOrange(kbdValue);
+}
 
 
+function checkWord(value){
+    // display word
+        const displayByShowWord = document.getElementById('display-by-show-word');
+        const result = displayByShowWord.innerText;
+    // check the word is correct
+        if (result.toUpperCase() === value) {
+            console.log('answer is correct');
+            // increage Point
+            increagePoint();
+        }
+        else{
+            console.log('answer is worng');
+            // decreage Life
+            discreageLife();
+        }
+    // remove the bg orange class from the targeted btn
+        let kbdValue = displayByShowWord.innerText.toUpperCase();
+        kdbBgRemoveOrange(kbdValue);
+    // reCall the game function 
+        openGame();
+}
 
 
+function theEndGame(){
+    // hide the gaming page 
+    getHideTheElement('play-ground-page');
+    // show end-game page
+    getShowTheElement('end-page');
+    // display the final result
+    const finalResultDisplay = document.getElementById('final-result-display');
+    const gamePointIndex = document.getElementById('game-point-index');
+    finalResultDisplay.innerText = gamePointIndex.innerText;
+}
 
 
-
-
-// start the game again from end-game page
-document.getElementById('play-again').addEventListener('click' , function(){
-    // hidden the end-page section
-    const endPage = document.getElementById('end-page');
-    endPage.classList.add('hidden');
-    // open the game section
-    const playGroundPage = document.getElementById('play-ground-page');
-    playGroundPage.classList.remove("hidden");
-})
+// play-again the game
+function playAgain(){
+    // revive the Life
+    reviveTheLifeAndPoint();
+    // hide end-game page 
+    getHideTheElement('end-page');
+    // show the gaming page
+    getShowTheElement('play-ground-page');
+}

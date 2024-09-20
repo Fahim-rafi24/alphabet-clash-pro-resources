@@ -44,7 +44,7 @@
         <div class="mt-3">
             <small class="md:text-xl font-light">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</small>
         </div>
-        <button id="start-btn" class="bg-white text-black px-6 py-4 mt-10 rounded-lg hover:bg-gradient-to-r from-blue-400 to-purple-600">Play Now</button>
+        <button onclick="startGame()" id="start-btn" class="bg-white text-black px-6 py-4 mt-10 rounded-lg hover:bg-gradient-to-r from-blue-400 to-purple-600">Play Now</button>
     </section>
 
     <!-- gaming page -->
@@ -52,11 +52,11 @@
         <!-- display-section -->
         <div id="display-section" class="flex flex-col justify-center mx-auto w-[80%] mt-16 bg-[#FFFFFFB0] border-[20px] border-gray-500 rounded-xl">
             <div class="hidden xl:block">
-                <p id="display-top-banner" class="w-[25%] mx-auto text-center bg-gray-500">Don't watch keyboard  while playing...</p>
+                <p id="display-top-banner" class="w-[25%] mx-auto text-center bg-gray-500 rounded-b-lg">Don't watch keyboard  while playing...</p>
             </div>
             <br>
             <div class="text-center text-9xl my-10">
-                <span id="display-by-show-word">y</span>
+                <span id="display-by-show-word">Y</span>
             </div>
         </div>
 
@@ -67,39 +67,39 @@
                 <div class="grid gap-2 mt-16">
                     <!-- First row -->
                     <div class="flex space-x-2 justify-center">
-                      <button onclick="checkWord('q')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">Q</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">W</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">E</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">R</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">T</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">Y</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">U</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">I</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">O</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">P</button>
+                      <button id="Q" onclick="checkWord('Q')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">Q</button>
+                      <button id="W" onclick="checkWord('W')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">W</button>
+                      <button id="E" onclick="checkWord('E')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">E</button>
+                      <button id="R" onclick="checkWord('R')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">R</button>
+                      <button id="T" onclick="checkWord('T')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">T</button>
+                      <button id="Y" onclick="checkWord('Y')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">Y</button>
+                      <button id="U" onclick="checkWord('U')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">U</button>
+                      <button id="I" onclick="checkWord('I')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">I</button>
+                      <button id="O" onclick="checkWord('O')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">O</button>
+                      <button id="P" onclick="checkWord('P')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">P</button>
                     </div>
                     <!-- Second row -->
                     <div class="flex space-x-2 justify-center">
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">A</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">S</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">D</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">F</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">G</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">H</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">J</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">K</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">L</button>
+                      <button id="A" onclick="checkWord('A')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">A</button>
+                      <button id="S" onclick="checkWord('S')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">S</button>
+                      <button id="D" onclick="checkWord('D')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">D</button>
+                      <button id="F" onclick="checkWord('F')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">F</button>
+                      <button id="G" onclick="checkWord('G')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">G</button>
+                      <button id="H" onclick="checkWord('H')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">H</button>
+                      <button id="J" onclick="checkWord('J')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">J</button>
+                      <button id="K" onclick="checkWord('K')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">K</button>
+                      <button id="L" onclick="checkWord('L')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">L</button>
                     </div>
                     <!-- Third row -->
                     <div class="flex space-x-2 justify-center">
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">Z</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">X</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">C</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">V</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">B</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">N</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">M</button>
-                      <button class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">,</button>
+                      <button id="Z" onclick="checkWord('Z')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">Z</button>
+                      <button id="X" onclick="checkWord('X')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">X</button>
+                      <button id="C" onclick="checkWord('C')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">C</button>
+                      <button id="V" onclick="checkWord('V')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">V</button>
+                      <button id="B" onclick="checkWord('B')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">B</button>
+                      <button id="N" onclick="checkWord('N')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">N</button>
+                      <button id="M" onclick="checkWord('M')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">M</button>
+                      <button id="," onclick="checkWord(',')" class="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded">,</button>
                     </div>
                   </div>
             </section>
@@ -125,15 +125,15 @@
     <!-- end-game page -->
     <section id="end-page" class="flex justify-center pt-[15%] poppins text-white hidden">
         <div class="border w-[20%] py-9 text-center bg-gradient-to-r from-[#FFFFFF5E] to-[#98979700]">
-            <h1 class="text-6xl font-bold">Score : <span class="font-normal">14</span></h1>
-            <button id="play-again" class="my-7 px-5 py-3 bg-white text-xl font-bold text-black rounded-lg">Play Now</button>
+            <h1 class="text-6xl font-bold">Score : <span id="final-result-display" class="font-normal">14</span></h1>
+            <button onclick="playAgain()" id="play-again" class="my-7 px-5 py-3 bg-white text-xl font-bold text-black rounded-lg">Play Now</button>
             <h6>Practice will make you Pro</h6>
         </div>
     </section>
 
 
 
-
+    <script src="js/utility.js"></script>
     <script src="js/first.js"></script>
 </body>
 </html>
